@@ -1,0 +1,19 @@
+@keyframes animate-light-speed-in-left {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-light-speed-in-left {
+  animation-name: animate-light-speed-in-left;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}

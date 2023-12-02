@@ -1,0 +1,19 @@
+@keyframes animate-light-speed-out-left-slow {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+.animate-light-speed-out-left-slow {
+  animation-name: animate-light-speed-out-left-slow;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}

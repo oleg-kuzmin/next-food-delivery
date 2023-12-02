@@ -1,0 +1,11 @@
+@mixin desktop {
+  @media screen and (hover: none) and (width < 1440px), screen and (hover: hover) and (width < 1448px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (hover: none) and (width < 652px), screen and (hover: hover) and (width < 660px) {
+    @content;
+  }
+}

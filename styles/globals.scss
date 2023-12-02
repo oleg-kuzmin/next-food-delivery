@@ -1,0 +1,51 @@
+@import '@/public/vendor/normalise-Nicolas-Gallagher.css';
+@import '@/public/vendor/reset-Meyerweb.css';
+@import '@/fonts/fonts.scss';
+@import '@/styles/outline-focus.scss';
+@import '@/styles/ui-green.scss';
+@import '@/styles/ui-gray.scss';
+@import '@/styles/ui-grid-gray.scss';
+@import '@/styles/animation/animate-light-speed-in-left.scss';
+@import '@/styles/animation/animate-light-speed-in-left-slow.scss';
+@import '@/styles/animation/animate-modal.scss';
+@import '@/styles/animation/animate-close-modal.scss';
+@import '@/styles/animation/animate-fade-in.scss';
+@import '@/styles/animation/animate-light-speed-out-left-slow.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scrollbar-color: #618967 rgba(255, 255, 255, 0.1);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #618967;
+  box-shadow: 0px 0px 6px 2px rgb(114 164 121 / 30%);
+  border-radius: 20px;
+}
+
+.body {
+  max-width: 1440px;
+  min-height: 1500px; //! временно
+  font-family: 'Gilroy', 'Helvetica', 'Arial', sans-serif;
+  // background-image: linear-gradient(0deg, #211f20 0%, #44403f 100%);
+  background-color: #403c3b;
+  scroll-behavior: smooth;
+
+  &_position_center {
+    margin: 0 auto;
+  }
+}

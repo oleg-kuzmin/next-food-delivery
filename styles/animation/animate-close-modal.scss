@@ -1,0 +1,16 @@
+@keyframes animate-close-modal {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.animate-close-modal {
+  animation-name: animate-close-modal;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}

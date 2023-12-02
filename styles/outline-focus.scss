@@ -1,0 +1,7 @@
+@import '@/styles/variables/variables.scss';
+
+.outline-focus {
+  &:focus-visible {
+    outline: 1px solid $text-gray;
+  }
+}

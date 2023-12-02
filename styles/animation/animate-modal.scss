@@ -1,0 +1,16 @@
+@keyframes animate-modal {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.animate-modal {
+  animation-name: animate-modal;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
