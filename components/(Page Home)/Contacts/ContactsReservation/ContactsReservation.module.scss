@@ -34,7 +34,7 @@
     @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
       width: 217px;
       &:last-of-type {
-        display: block;
+        display: flex;
       }
     }
   }
