@@ -1,7 +1,7 @@
-// import '@/styles/globals.scss';
-// import { Providers } from '@/redux/providers';
-// import Header from '@/components/(Header)/Header';
-// import Footer from '@/components/(Footer)/Footer';
+import '@/styles/globals.scss';
+import { Providers } from '@/redux/providers';
+import Header from '@/components/(Header)/Header';
+import Footer from '@/components/(Footer)/Footer';
 
 export const metadata = {
   title: 'food-delivery',
@@ -9,15 +9,15 @@ export const metadata = {
 
 export default function RootLayout(props) {
   return (
-    // <Providers>
-      <html lang="ru">
+    <Providers>
+      <html lang="en">
         <head />
         <body className="body body_position_center" id="body">
-          {/* <Header /> */}
+          <Header />
           {props.children}
-          {/* <Footer /> */}
+          <Footer />
         </body>
       </html>
-    // </Providers>
+    </Providers>
   );
 }
