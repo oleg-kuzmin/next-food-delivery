@@ -1,0 +1,66 @@
+@import '@/styles/mixins/mixins.scss';
+
+.FoodSection {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+  scroll-margin-top: 75px;
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__Title {
+    padding: 49px 0 0 89px;
+    @media screen and (hover: none) and (width < 1214px), screen and (hover: hover) and (width < 1222px) {
+      padding-left: 30px;
+    }
+    @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+      padding-left: 15px;
+    }
+    @include mobile {
+      padding-top: 35px;
+    }
+  }
+
+  &__Swiper {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__SwiperSlide {
+    width: max-content;
+    padding: 51px 10px 48px 10px;
+    @include mobile {
+      padding-top: 40px;
+    }
+    @media screen and (hover: none) and (width < 700px), screen and (hover: hover) and (width < 708px) {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+    &:first-of-type {
+      padding-left: 38px;
+      @media screen and (hover: none) and (width < 1214px), screen and (hover: hover) and (width < 1222px) {
+        padding-left: 30px;
+      }
+      @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+        padding-left: 15px;
+      }
+      @media screen and (hover: none) and (width < 690px), screen and (hover: hover) and (width < 698px) {
+        padding-left: 7px;
+      }
+    }
+    &:last-of-type {
+      padding-right: 42px;
+      @media screen and (hover: none) and (width < 1214px), screen and (hover: hover) and (width < 1222px) {
+        padding-right: 30px;
+      }
+      @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+        padding-right: 15px;
+      }
+      @media screen and (hover: none) and (width < 690px), screen and (hover: hover) and (width < 698px) {
+        padding-right: 7px;
+      }
+    }
+  }
+}

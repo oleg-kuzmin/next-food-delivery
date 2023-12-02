@@ -1,0 +1,37 @@
+@import '@/styles/mixins/mixins.scss';
+
+.OrderText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 265px;
+  width: 265px;
+  @include mobile {
+    width: 138px;
+    min-width: 138px;
+    min-height: 40px;
+  }
+
+  &__Title {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__SubTitle {
+    color: #a6a7ab;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @include mobile {
+      display: none;
+    }
+  }
+}

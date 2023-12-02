@@ -1,0 +1,18 @@
+@import '@/styles/mixins/mixins.scss';
+
+.BasketMobile {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  min-width: 62px;
+  width: 62px;
+  min-height: 56px;
+  height: 56px;
+  border-radius: 10px;
+  text-decoration: none;
+  pointer-events: visible;
+
+  @include mobile {
+    display: flex;
+  }
+}

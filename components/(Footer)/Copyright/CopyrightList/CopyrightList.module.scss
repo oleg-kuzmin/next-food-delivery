@@ -1,0 +1,12 @@
+.CopyrightList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 6px;
+  transform: translateZ(0);
+
+  @media screen and (hover: none) and (width < 953px), screen and (hover: hover) and (width < 961px) {
+    padding-top: 12px;
+    align-items: center;
+  }
+}

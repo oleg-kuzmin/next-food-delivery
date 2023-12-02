@@ -1,0 +1,11 @@
+@import '@/styles/mixins/mixins.scss';
+
+.CardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 11px 16px 5px 20px;
+  @include mobile {
+    padding: 9px 15px 6px 15px;
+  }
+}

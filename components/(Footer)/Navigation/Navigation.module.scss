@@ -1,0 +1,23 @@
+.Navigation {
+  display: flex;
+  gap: 40px;
+  padding: 86px 0 0 85px;
+  transform: translateZ(0);
+
+  @media screen and (hover: none) and (width < 1215px), screen and (hover: hover) and (width < 1223px) {
+    padding-right: 85px;
+  }
+
+  @media screen and (hover: none) and (width < 1177px), screen and (hover: hover) and (width < 1185px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media screen and (hover: none) and (width < 1038px), screen and (hover: hover) and (width < 1046px) {
+    gap: 20px;
+  }
+
+  @media screen and (hover: none) and (width < 953px), screen and (hover: hover) and (width < 961px) {
+    display: none;
+  }
+}

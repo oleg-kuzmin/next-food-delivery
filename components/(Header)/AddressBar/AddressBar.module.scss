@@ -1,0 +1,33 @@
+@import '@/styles/mixins/mixins.scss';
+
+.AddressBar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  min-width: 345px;
+  max-width: 555px;
+  height: max-content;
+  border-radius: 10px;
+  background-color: #504b4a;
+  z-index: 3;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s, opacity 0.3s;
+  @include mobile {
+    width: calc(100% - 30px);
+    min-width: 240px;
+    max-width: none;
+    &_invisible {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__Input {
+    width: 100%;
+  }
+
+  &__Option {
+    width: 100%;
+  }
+}

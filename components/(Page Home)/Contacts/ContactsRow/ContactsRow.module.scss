@@ -1,0 +1,45 @@
+@import '@/styles/mixins/mixins.scss';
+
+.ContactsRow {
+  display: flex;
+  gap: 11px;
+  @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
+    gap: 13px;
+  }
+  &__Icon {
+    min-width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    &_bg_location {
+      background-image: url('~@/public/svg/location-green.svg');
+    }
+    &_bg_mail {
+      background-image: url('~@/public/svg/mail.svg');
+    }
+  }
+  &__Address {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__Title {
+    color: #cfcfcf;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__Subtitle {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.47;
+    @include mobile {
+      font-size: 14px;
+    }
+    @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
+      line-height: 1.56;
+    }
+  }
+}

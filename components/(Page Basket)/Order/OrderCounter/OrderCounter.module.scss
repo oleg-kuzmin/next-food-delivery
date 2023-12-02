@@ -1,0 +1,19 @@
+@import '@/styles/mixins/mixins.scss';
+
+.OrderCounter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 36px;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  @include mobile {
+    width: 25px;
+    font-size: 12px;
+  }
+}

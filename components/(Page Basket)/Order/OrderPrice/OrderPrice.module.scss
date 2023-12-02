@@ -1,0 +1,25 @@
+@import '@/styles/mixins/mixins.scss';
+
+.OrderPrice {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  min-width: 82px;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: right;
+  white-space: nowrap;
+  &::after {
+    content: ' ₽';
+  }
+  @include mobile {
+    min-width: 49px;
+    font-size: 12px;
+    gap: 3px;
+  }
+}

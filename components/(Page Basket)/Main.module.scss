@@ -1,0 +1,55 @@
+@import '@/styles/mixins/mixins.scss';
+
+.Main {
+  &__LinkHome {
+    margin: 33px 0 18px 317px;
+    @media screen and (hover: none) and (width < 1432px), screen and (hover: hover) and (width < 1440px) {
+      margin-left: 22%;
+    }
+    @include mobile {
+      margin-top: 32px;
+      margin-left: 23px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__Title {
+    margin: 0 0 72px 318px;
+    @media screen and (hover: none) and (width < 1432px), screen and (hover: hover) and (width < 1440px) {
+      margin-left: 22%;
+    }
+    @include mobile {
+      margin-left: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__Orders {
+    margin: 0 auto;
+  }
+
+  &__AdditionalTitle {
+    margin: 39px auto 30px;
+    @include mobile {
+      margin-top: 35px;
+      margin-bottom: 35px;
+      margin-left: 24px;
+    }
+  }
+
+  &__AdditionalOrders {
+    margin: 0 auto;
+  }
+
+  &__DecorateLine {
+    margin: 29px auto 0;
+  }
+
+  &__TotalPrice {
+    margin: 49px auto 89px;
+    @include mobile {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+  }
+}

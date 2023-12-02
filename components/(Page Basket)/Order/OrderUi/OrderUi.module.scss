@@ -1,0 +1,26 @@
+@import '@/styles/mixins/mixins.scss';
+
+.OrderUi {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  &__Price {
+    margin: 0 79px 0 109px;
+    @media screen and (hover: none) and (width < 971px), screen and (hover: hover) and (width < 979px) {
+      margin-left: 79px;
+    }
+    @media screen and (hover: none) and (width < 872px), screen and (hover: hover) and (width < 880px) {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    @media screen and (hover: none) and (width < 737px), screen and (hover: hover) and (width < 745px) {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    @include mobile {
+      margin-right: 7px;
+      margin-left: 33px;
+    }
+  }
+}

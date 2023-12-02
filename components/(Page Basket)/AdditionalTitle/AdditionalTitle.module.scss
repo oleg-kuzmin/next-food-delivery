@@ -1,0 +1,40 @@
+@import '@/styles/mixins/mixins.scss';
+
+.AdditionalTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1096px;
+  @media screen and (hover: none) and (width < 1156px), screen and (hover: hover) and (width < 1164px) {
+    width: calc(100% - 60px);
+  }
+  @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+    width: calc(100% - 30px);
+  }
+  @include mobile {
+    width: max-content;
+  }
+
+  &__DecorateLine {
+    display: none;
+    @include mobile {
+      display: block;
+      width: 4px;
+      height: 22px;
+      background-color: #618967;
+    }
+  }
+
+  &__Text {
+    color: #fff;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+}

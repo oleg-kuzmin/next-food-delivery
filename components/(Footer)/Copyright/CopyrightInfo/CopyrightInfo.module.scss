@@ -1,0 +1,15 @@
+.CopyrightInfo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  color: #cfcfcf;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  @media screen and (hover: none) and (width < 953px), screen and (hover: hover) and (width < 961px) {
+    padding-top: 27px;
+    text-align: center;
+  }
+}

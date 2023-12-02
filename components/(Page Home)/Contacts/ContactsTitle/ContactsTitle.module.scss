@@ -1,0 +1,13 @@
+.ContactsTitle {
+  padding: 23px 0 25px 43px;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
+    padding: 29px 0 15px;
+    text-align: center;
+  }
+}

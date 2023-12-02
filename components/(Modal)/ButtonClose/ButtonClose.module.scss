@@ -1,0 +1,15 @@
+.ButtonClose {
+  width: 29px;
+  height: 29px;
+  border: 0;
+  background-image: url('~@/public/svg/modal-close.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 1;
+  &:hover {
+    opacity: 0.5;
+  }
+}

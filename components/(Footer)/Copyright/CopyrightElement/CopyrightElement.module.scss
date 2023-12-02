@@ -1,0 +1,19 @@
+.CopyrightElement {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  &::after {
+    content: '';
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}

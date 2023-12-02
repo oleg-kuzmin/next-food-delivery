@@ -1,0 +1,31 @@
+.ContactsSocial {
+  display: flex;
+  gap: 26px;
+  padding-top: 29px;
+  padding-left: 152px;
+  @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
+    padding-top: 25px;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  &__Title {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__List {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__Image {
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+}

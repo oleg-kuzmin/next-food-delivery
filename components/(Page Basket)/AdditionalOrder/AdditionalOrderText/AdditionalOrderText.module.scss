@@ -1,0 +1,14 @@
+@import '@/styles/mixins/mixins.scss';
+
+.AdditionalOrderText {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 16px;
+    min-height: 40px;
+  }
+}

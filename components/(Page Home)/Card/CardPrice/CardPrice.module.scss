@@ -1,0 +1,13 @@
+.CardPrice {
+  min-width: 67px;
+  width: 85px;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  user-select: none;
+  &::after {
+    content: ' ₽';
+  }
+}

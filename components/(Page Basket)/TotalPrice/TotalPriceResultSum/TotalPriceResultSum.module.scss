@@ -1,0 +1,33 @@
+@import '@/styles/mixins/mixins.scss';
+
+.TotalPriceResultSum {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding-bottom: 4px;
+  @include mobile {
+    justify-content: center;
+  }
+
+  &__Span {
+    color: #a6a7ab;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__Value {
+    color: #fff;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    &::after {
+      content: ' ₽';
+    }
+    &_red {
+      color: red;
+    }
+  }
+}

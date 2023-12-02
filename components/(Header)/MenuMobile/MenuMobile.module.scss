@@ -1,0 +1,10 @@
+@import '@/styles/mixins/mixins.scss';
+
+.MenuMobile {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    pointer-events: visible;
+  }
+}

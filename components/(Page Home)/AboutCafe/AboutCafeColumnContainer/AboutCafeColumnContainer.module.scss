@@ -1,0 +1,10 @@
+.AboutCafeColumnContainer {
+  box-sizing: content-box;
+  max-width: 563px;
+  padding-left: 70px;
+
+  @media screen and (hover: none) and (width < 1298px), screen and (hover: hover) and (width < 1306px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

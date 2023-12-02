@@ -1,0 +1,15 @@
+@import '@/styles/mixins/mixins.scss';
+
+.EmptyBasketTitle {
+  margin-bottom: 43px;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  @include mobile {
+    margin-bottom: 39px;
+    font-size: 25px;
+  }
+}

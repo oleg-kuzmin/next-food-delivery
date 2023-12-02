@@ -1,0 +1,11 @@
+.AboutCafeGridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 228px);
+  grid-template-rows: repeat(2, 227px);
+  gap: 15px;
+  padding: 71px 100px 0 0;
+
+  @media screen and (hover: none) and (width < 1298px), screen and (hover: hover) and (width < 1306px) {
+    padding-right: 30px;
+  }
+}

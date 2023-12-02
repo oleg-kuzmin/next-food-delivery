@@ -1,0 +1,48 @@
+.Navigation {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &__Swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__SwiperSlide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 29px 27px 24px;
+    @media screen and (hover: none) and (width < 1214px), screen and (hover: hover) and (width < 1222px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media screen and (hover: none) and (width < 652px), screen and (hover: hover) and (width < 660px) {
+      padding: 20px 13px 15px;
+    }
+
+    &:first-of-type {
+      padding-left: 79px;
+      @media screen and (hover: none) and (width < 1214px), screen and (hover: hover) and (width < 1222px) {
+        padding-left: 30px;
+      }
+      @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+        padding-left: 15px;
+      }
+    }
+
+    &:last-of-type {
+      @media screen and (hover: none) and (width < 1440px), screen and (hover: hover) and (width < 1448px) {
+        padding-right: 79px;
+      }
+      @media screen and (hover: none) and (width < 1214px), screen and (hover: hover) and (width < 1222px) {
+        padding-right: 30px;
+      }
+      @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+        padding-right: 15px;
+      }
+    }
+  }
+}

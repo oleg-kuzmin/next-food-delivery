@@ -1,0 +1,27 @@
+.LinkHome {
+  display: flex;
+  gap: 6px;
+  width: max-content;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  transform: translateZ(0);
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &__Icon {
+    width: 7px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url('~@/public/svg/arrow-back.svg');
+    background-position: 0px 6px;
+  }
+
+  &__Text {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

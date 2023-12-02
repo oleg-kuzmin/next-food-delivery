@@ -1,0 +1,62 @@
+@import '@/styles/mixins/mixins.scss';
+
+.ContactsReservation {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  padding: 17px 0 0 52px;
+  @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 29px;
+    padding-left: 0;
+  }
+
+  &__Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 211px;
+    width: 211px;
+    height: 59px;
+    padding: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:last-of-type {
+      display: none;
+    }
+    @media screen and (hover: none) and (width < 556px), screen and (hover: hover) and (width < 564px) {
+      width: 217px;
+      &:last-of-type {
+        display: block;
+      }
+    }
+  }
+
+  &__Address {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__Number {
+    color: #fff;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__Caption {
+    color: #cfcfcf;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,36 @@
+.AboutCafeGridButton {
+  padding: 122px 0 0 0;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  background-position: center 71px;
+  background-repeat: no-repeat;
+
+  &:first-of-type {
+    background-position: center 66px;
+  }
+
+  &_bg_onion {
+    background-image: url('~@/public/svg/onion-white.svg');
+    &:hover {
+      background-image: url('~@/public/svg/onion-green.svg');
+    }
+  }
+
+  &_bg_lightning {
+    background-image: url('~@/public/svg/lightning-white.svg');
+    &:hover {
+      background-image: url('~@/public/svg/lightning-green.svg');
+    }
+  }
+
+  &_bg_cap {
+    background-image: url('~@/public/svg/cap-white.svg');
+    &:hover {
+      background-image: url('~@/public/svg/cap-green.svg');
+    }
+  }
+}

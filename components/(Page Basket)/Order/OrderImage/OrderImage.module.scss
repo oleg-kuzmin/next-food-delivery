@@ -1,0 +1,11 @@
+@import '@/styles/mixins/mixins.scss';
+
+.OrderImage {
+  width: 117px;
+  height: 86px;
+  border-radius: 10px;
+  @include mobile {
+    width: 111px;
+    height: 82px;
+  }
+}

@@ -1,0 +1,16 @@
+.CallButton {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  @media screen and (hover: none) and (width < 920px), screen and (hover: hover) and (width < 928px) {
+    display: none;
+  }
+
+  &__Icon {
+    width: 100%;
+    height: 100%;
+    background-image: url('~@/public/svg/tel.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

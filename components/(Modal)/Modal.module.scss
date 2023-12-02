@@ -1,0 +1,30 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 64, 63, 0.9);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__Content {
+    position: relative;
+  }
+
+  &__ButtonClose {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+  }
+}

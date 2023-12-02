@@ -1,0 +1,30 @@
+@import '@/styles/mixins/mixins.scss';
+
+.AboutCafe {
+  height: 505px;
+  @media screen and (hover: none) and (width < 1184px), screen and (hover: hover) and (width < 1192px) {
+    display: none;
+  }
+
+  &__Content {
+    position: relative;
+    top: 45px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1364px;
+    height: 610px;
+    margin: 0 auto;
+    background-image: url('~@/public/images/about-picture/about-picture.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 1;
+    @media screen and (hover: none) and (width < 1440px), screen and (hover: hover) and (width < 1448px) {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+    @media screen and (hover: none) and (width < 1298px), screen and (hover: hover) and (width < 1306px) {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+  }
+}

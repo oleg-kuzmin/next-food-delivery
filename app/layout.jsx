@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout(props) {
   return (
     <Providers>
-      <html lang="en">
+      <html lang="ru">
         <head />
         <body className="body body_position_center" id="body">
           <Header />

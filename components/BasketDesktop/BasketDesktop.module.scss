@@ -1,0 +1,49 @@
+@import '@/styles/mixins/mixins.scss';
+
+.BasketDesktop {
+  display: flex;
+  align-items: center;
+  width: 149px;
+  min-width: 149px;
+  height: 52px;
+  border-radius: 10px;
+  text-decoration: none;
+  @include mobile {
+    display: none;
+  }
+
+  &__Text {
+    padding: 0 20px 0 24px;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  &__Line {
+    width: 1px;
+    height: 38px;
+    margin-right: 11px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &__CountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background-color: #fff;
+  }
+
+  &__Count {
+    color: #403c3b;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

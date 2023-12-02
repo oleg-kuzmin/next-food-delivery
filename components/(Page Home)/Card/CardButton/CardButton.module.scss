@@ -1,0 +1,74 @@
+@import '@/styles/mixins/mixins.scss';
+
+.CardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  border-radius: 10px;
+  padding: 0;
+  transition: width 0.2s linear, box-shadow 0.3s, font-size 0.2s linear;
+  @include mobile {
+    height: 41px;
+  }
+
+  &_type_minus {
+    width: 62px;
+    &::after {
+      content: '';
+      width: 62px;
+      height: 44px;
+      background-image: url('~@/public/svg/minus.svg');
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: center;
+    }
+  }
+
+  &_type_plus {
+    width: 62px;
+    font-size: 0;
+    &::after {
+      content: '';
+      width: 62px;
+      height: 44px;
+      background-image: url('~@/public/svg/plus.svg');
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: center;
+    }
+  }
+
+  &_type_basket {
+    width: 137px;
+    justify-content: flex-start;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+    @include mobile {
+      width: 128px;
+    }
+    &::before {
+      content: 'В корзину';
+      padding: 0 12px 2px 20px;
+      @include mobile {
+        padding-left: 15px;
+      }
+    }
+    &::after {
+      content: '';
+      width: 24px;
+      height: 44px;
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('~@/public/svg/basket.svg');
+      @include mobile {
+        background-size: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '@/styles/mixins/mixins.scss';
+
+.DecorateLine {
+  width: 100%;
+  max-width: 1059px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  @media screen and (hover: none) and (width < 1156px), screen and (hover: hover) and (width < 1164px) {
+    width: calc(100% - 97px);
+  }
+  @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+    width: calc(100% - 67px);
+  }
+  @include mobile {
+    display: none;
+  }
+}

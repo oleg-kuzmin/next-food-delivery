@@ -1,0 +1,31 @@
+@import '@/styles/mixins/mixins.scss';
+
+.BlockTitle {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  @include mobile {
+    gap: 10px;
+  }
+
+  &__DecorateLine {
+    width: 4px;
+    height: 33px;
+    background: #618967;
+    @include mobile {
+      height: 22px;
+    }
+  }
+
+  &__Text {
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+}

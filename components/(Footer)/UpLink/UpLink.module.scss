@@ -1,0 +1,38 @@
+.UpLink {
+  min-width: 64px;
+  height: 64px;
+  margin: 51px 0 0 38px;
+  border-radius: 50%;
+  font-size: 0;
+  background-color: #fff;
+  background-image: url('~@/public/svg/footer-triangle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  transition: box-shadow 0.3s, opacity 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 0px 10px #fff;
+    opacity: 0.7;
+  }
+
+  @media screen and (hover: none) and (width < 1215px), screen and (hover: hover) and (width < 1223px) {
+    margin-left: 30px;
+  }
+
+  @media screen and (hover: none) and (width < 953px), screen and (hover: hover) and (width < 961px) {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    min-width: 54px;
+    height: 54px;
+    margin-top: 0;
+    margin-left: 0;
+    background-size: 20px;
+  }
+
+  @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+    left: 16px;
+  }
+}

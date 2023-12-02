@@ -1,0 +1,22 @@
+@import '@/styles/mixins/mixins.scss';
+@import '@/styles/variables/variables.scss';
+
+.Card {
+  position: relative;
+  width: 325px;
+  height: 385px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0px 30px 45px rgba(43, 40, 40, 0.6);
+  }
+
+  @include mobile {
+    width: 310px;
+    height: 367px;
+  }
+}

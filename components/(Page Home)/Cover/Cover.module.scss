@@ -1,0 +1,10 @@
+.Cover {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1440px;
+  height: 30px;
+  background-image: linear-gradient(180deg, rgba(59, 56, 55, 0) 0%, #3b3837 100%);
+  z-index: 1;
+  pointer-events: none;
+}

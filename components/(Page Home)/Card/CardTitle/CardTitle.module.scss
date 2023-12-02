@@ -1,0 +1,12 @@
+@import '@/styles/mixins/mixins.scss';
+
+.CardTitle {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include mobile {
+    font-size: 20px;
+  }
+}

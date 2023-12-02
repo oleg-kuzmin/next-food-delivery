@@ -1,0 +1,15 @@
+@import '@/styles/mixins/mixins.scss';
+
+.AdditionalOrderImage {
+  width: 209px;
+  height: 123px;
+  border-radius: 10px;
+  @media screen and (hover: none) and (width < 953px), screen and (hover: hover) and (width < 961px) {
+    width: 117px;
+    height: 86px;
+  }
+  @include mobile {
+    width: 111px;
+    height: 82px;
+  }
+}

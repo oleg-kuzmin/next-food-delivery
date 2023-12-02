@@ -1,0 +1,9 @@
+.CallContacts {
+  display: flex;
+  flex-direction: column;
+  min-width: 136px;
+
+  @media screen and (hover: none) and (width < 920px), screen and (hover: hover) and (width < 928px) {
+    display: none;
+  }
+}

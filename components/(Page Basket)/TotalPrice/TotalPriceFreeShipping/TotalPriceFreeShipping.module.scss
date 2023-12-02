@@ -1,0 +1,31 @@
+@import '@/styles/mixins/mixins.scss';
+
+.TotalPriceFreeShipping {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  padding-bottom: 11px;
+  @include mobile {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  &__Span {
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__Value {
+    color: #72a479;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    &::after {
+      content: ' ₽';
+    }
+  }
+}
