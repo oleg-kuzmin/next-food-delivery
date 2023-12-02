@@ -18,7 +18,7 @@ export default function AddressBar({ className }) {
   useEffect(() => {
     document.addEventListener('mousedown', handleClickPage);
     document.addEventListener('scroll', handleScrollPage);
-    if (document.documentElement.scrollTop >= 1) {
+    if (document.documentElement.scrollTop >= 142) {
       setIsVisibleAddressBar(false);
     } else {
       setIsVisibleAddressBar(true);
@@ -91,7 +91,7 @@ export default function AddressBar({ className }) {
     }
   };
   const handleScrollPage = () => {
-    if (document.documentElement.scrollTop >= 1) {
+    if (document.documentElement.scrollTop >= 142) {
       setIsVisibleAddressBar(false);
     } else {
       setIsVisibleAddressBar(true);
