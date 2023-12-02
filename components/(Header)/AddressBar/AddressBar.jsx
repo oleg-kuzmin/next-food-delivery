@@ -52,7 +52,11 @@ export default function AddressBar({ className }) {
       setIsVisibleOptions(false);
     }
   };
-  const handleClickInput = () => {
+  const handleClickInput = evt => {
+    const input = evt.target;
+    input.selectionStart = input.selectionEnd = input.value.length;
+    input.scrollLeft = input.scrollWidth;
+    input.focus();
     setIndexActiveOption(-1);
     if (address !== '') {
       setIsVisibleOptions(true);
