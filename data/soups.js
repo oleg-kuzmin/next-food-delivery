@@ -14,6 +14,7 @@ export const soups = [
     id: 'chickenSoup',
     description: 'с вермишелью, яйцом и зеленью',
     type: 'soups',
+    counter: 0,
   },
   {
     title: 'Томатный суп',
@@ -23,6 +24,7 @@ export const soups = [
     id: 'tomatoSoup',
     description: 'с курицей, фасолью, помидорами и свежим сладким перцем',
     type: 'soups',
+    counter: 0,
   },
   {
     title: 'Чихиртма',
@@ -32,6 +34,7 @@ export const soups = [
     id: 'chikhirtmaSoup',
     description: 'насыщенный куриный суп по-грузински',
     type: 'soups',
+    counter: 0,
   },
   {
     title: 'Фунчоза',
@@ -41,6 +44,7 @@ export const soups = [
     id: 'funchozaChineseSoup',
     description: 'с обжаренными грибами, овощами, соевым соусом и зеленью',
     type: 'soups',
+    counter: 0,
   },
   {
     title: 'Солянка мясная',
@@ -50,6 +54,7 @@ export const soups = [
     id: 'solyankaSoup',
     description: 'с копченостями, острыми приправами, маслинами, лимоном и сметаной',
     type: 'soups',
+    counter: 0,
   },
   {
     title: 'Борщ классический',
@@ -59,5 +64,6 @@ export const soups = [
     id: 'borschSoup',
     description: 'со свининой, капустой, сметаной и зеленью',
     type: 'soups',
+    counter: 0,
   },
 ];
