@@ -8,7 +8,7 @@ export default function CardCounter({ isActive, counter }) {
   return (
     <CSSTransition nodeRef={nodeRef} in={isActive} classNames={{ ...styles }} timeout={200} unmountOnExit>
       <div ref={nodeRef} className={styles.CardCounter}>
-        <span className={styles.CardCounter__Span}>{counter}</span>
+        {counter}
       </div>
     </CSSTransition>
   );
