@@ -1,6 +1,7 @@
 @import '@/styles/mixins/mixins.scss';
 
 .CardButton {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,9 +60,9 @@
       }
     }
     &::after {
-      content: '';
       position: absolute;
-      right: 16px;
+      right: 14px;
+      content: '';
       width: 24px;
       height: 44px;
       background-size: 24px;
