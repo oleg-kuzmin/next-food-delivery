@@ -3,6 +3,10 @@ import styles from './CardButton.module.scss';
 export default function CardButton({ onClick, type }) {
   let classModifier;
 
+  const handleClick = () => {
+    onClick();
+  };
+
   switch (type) {
     case 'basket':
       classModifier = ` ${styles.CardButton_type_basket}`;
@@ -17,5 +21,7 @@ export default function CardButton({ onClick, type }) {
       throw Error('Type is undefined');
   }
 
-  return <button className={styles.CardButton + ' ui-green outline-focus' + classModifier} onClick={onClick}></button>;
+  return (
+    <button className={styles.CardButton + ' ui-green outline-focus' + classModifier} onClick={handleClick}></button>
+  );
 }

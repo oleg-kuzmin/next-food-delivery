@@ -7,7 +7,7 @@
   height: 44px;
   border-radius: 10px;
   padding: 0;
-  transition: width 0.2s linear, box-shadow 0.3s, font-size 0.2s linear;
+  transition: width 0.2s linear, box-shadow 0.3s, font-size 0.5s linear, background-image 0.5s linear;
   @include mobile {
     height: 41px;
   }
@@ -65,7 +65,7 @@
       background-size: 24px;
       background-position: center;
       background-repeat: no-repeat;
-      // background-image: url('~@/public/svg/basket.svg');
+      background-image: url('~@/public/svg/basket.svg');
       @include mobile {
         background-size: 20px;
       }
