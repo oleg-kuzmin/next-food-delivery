@@ -1,3 +1,15 @@
+@import '@/styles/mixins/mixins.scss';
+
 .Main {
-  
+  &__LinkBack {
+    margin: 33px 0 18px 317px;
+    @media screen and (hover: none) and (width < 1432px), screen and (hover: hover) and (width < 1440px) {
+      margin-left: 22%;
+    }
+    @include mobile {
+      margin-top: 32px;
+      margin-left: 23px;
+      margin-bottom: 22px;
+    }
+  }
 }

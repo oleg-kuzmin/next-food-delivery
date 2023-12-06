@@ -1,4 +1,4 @@
-import LinkHome from './LinkHome/LinkHome';
+import LinkBack from '@/components/LinkBack/LinkBack';
 import Title from './Title/Title';
 import Orders from './Orders/Orders';
 import AdditionalTitle from './AdditionalTitle/AdditionalTitle';
@@ -10,7 +10,7 @@ import styles from './Main.module.scss';
 export default function Main() {
   return (
     <main className={styles.Main}>
-      <LinkHome className={styles.Main__LinkHome} />
+      <LinkBack className={styles.Main__LinkBack} text="к выбору блюда" href="/#navigation" />
       <Title className={styles.Main__Title} />
       <Orders className={styles.Main__Orders} />
       <AdditionalTitle className={styles.Main__AdditionalTitle} />
