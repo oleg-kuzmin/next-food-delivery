@@ -55,7 +55,7 @@ export default function FoodSection({ title, id, data, priority }) {
   return (
     documentContainer !== null && (
       <section className={styles.FoodSection} id={id}>
-        <BlockTitle className={styles.FoodSection__Title}>{title}</BlockTitle>
+        <BlockTitle className={styles.FoodSection__Title} text={title} />
         <Swiper {...swiperConfig}>{cardsArray}</Swiper>
       </section>
     )

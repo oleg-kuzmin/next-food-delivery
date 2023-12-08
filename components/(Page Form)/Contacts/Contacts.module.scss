@@ -1,0 +1,38 @@
+@import '@/styles/mixins/mixins.scss';
+
+.Section {
+  margin-bottom: 22px;
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.Contacts {
+  &__Title {
+    margin: 31px 0 31px 30px;
+    @include mobile {
+      margin-top: 29px;
+      margin-bottom: 26px;
+      margin-left: 39px;
+    }
+  }
+
+  &__Fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: calc(100% - 60px);
+    margin: 0 auto 55px;
+    @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+      width: calc(100% - 30px);
+    }
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 31px;
+    }
+    @media screen and (hover: none) and (width < 350px), screen and (hover: hover) and (width < 358px) {
+      width: calc(100% - 15px);
+    }
+  }
+}

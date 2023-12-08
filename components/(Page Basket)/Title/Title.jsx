@@ -6,7 +6,7 @@ export default function Title({ className }) {
   const classElement = className ? ` ${className}` : '';
   return (
     <div className={styles.Title + classElement}>
-      <BlockTitle>корзина</BlockTitle>
+      <BlockTitle text="корзина" />
       <TitleCounter className={styles.Title__Counter} />
     </div>
   );

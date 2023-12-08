@@ -1,0 +1,23 @@
+.DeliveryInfo {
+  display: flex;
+  gap: 10px;
+  @media screen and (max-width: 770px) {
+    display: none;
+  }
+
+  &__Icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('~@/public/svg/clock.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__Text {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
