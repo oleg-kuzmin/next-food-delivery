@@ -2,10 +2,43 @@
 
 .Payment {
   &__Title {
-    margin: 29px 0 31px 31px;
+    margin: 29px 0 32px 31px;
     @include mobile {
       margin-top: 29px;
-      margin-bottom: 26px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__InputThreeRadio {
+    margin-left: 31px;
+    @include mobile {
+      margin-left: 25px;
+    }
+    @media screen and (hover: none) and (width < 400px), screen and (hover: hover) and (width < 408px) {
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__EmptyBlock {
+    margin-bottom: 29px;
+    @include mobile {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__InputAmount {
+    width: 173px;
+    margin: 15px 0 30px 31px;
+    @include mobile {
+      width: calc(100% - 50px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
+    }
+    @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 370px) {
+      width: calc(100% - 30px);
     }
   }
 }

@@ -15,8 +15,8 @@
     margin: 0 0 29px 31px;
     @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
       justify-content: center;
-      margin-left: 15px;
-      margin-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
     }
     @include mobile {
       margin-bottom: 19px;
@@ -32,7 +32,7 @@
 
   &__Address {
     margin: 0 0 32px 31px;
-    @media screen and (hover: none) and (width < 740px), screen and (hover: hover) and (width < 748x) {
+    @media screen and (hover: none) and (width < 740px), screen and (hover: hover) and (width < 748px) {
       justify-content: center;
       margin-left: 10px;
       margin-right: 10px;

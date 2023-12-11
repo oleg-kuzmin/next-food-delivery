@@ -9,13 +9,13 @@ import Address from './Address/Address';
 import styles from './Delivery.module.scss';
 
 export default function Delivery({ className }) {
-  const [isAddress, setIsAddress] = useState(true);
+  const [isVisibleAddress, setIsVisibleAddress] = useState(true);
 
   const handleChange = evt => {
     if (evt.target.value === 'true') {
-      setIsAddress(true);
+      setIsVisibleAddress(true);
     } else {
-      setIsAddress(false);
+      setIsVisibleAddress(false);
     }
   };
 
@@ -34,10 +34,10 @@ export default function Delivery({ className }) {
           text2="Самовывоз"
           onChange={handleChange}
         />
-        {isAddress && <Info />}
+        {isVisibleAddress && <Info />}
       </div>
-      {isAddress && <TitleSmall className={styles.Delivery__TitleSmall} text="Адрес доставки" />}
-      {isAddress && <Address className={styles.Delivery__Address} />}
+      {isVisibleAddress && <TitleSmall className={styles.Delivery__TitleSmall} text="Адрес доставки" />}
+      {isVisibleAddress && <Address className={styles.Delivery__Address} />}
     </Section>
   );
 }

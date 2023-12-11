@@ -1,0 +1,10 @@
+@import '@/styles/mixins/mixins.scss';
+
+.DecorateLine {
+  width: 1px;
+  height: 58px;
+  background-color: #72a479;
+  @include mobile {
+    height: 51px;
+  }
+}
