@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import styles from './InputText.module.scss';
+import styles from './InputTel.module.scss';
 
-export default function InputText({ name, placeholder, required, className }) {
+export default function InputTel({ name, placeholder, required, className }) {
   const [value, setValue] = useState('');
   const [isValid, setIsValid] = useState(false);
   const classElement = className ? ` ${className}` : '';
@@ -17,8 +17,8 @@ export default function InputText({ name, placeholder, required, className }) {
   };
 
   return (
-    <label className={styles.Label + classElement}>
-      {!isValid && required && <span className={styles.Error}>Заполните поле</span>}
+    <div className={styles.Label + classElement}>
+      {!isValid && required && <span className={styles.Error}>Заполните это поле в формате +79175105759</span>}
       {!value && (
         <span className={styles.Text}>
           {placeholder}
@@ -26,14 +26,15 @@ export default function InputText({ name, placeholder, required, className }) {
         </span>
       )}
       <input
-        className={styles.Input}
-        type="text"
+        className={styles.Input + ' outline-focus'}
+        type="tel"
         name={name}
         required={required}
         onChange={handleChangeValue}
         value={value}
+        pattern="^\+7[0-9]{10}"
         autoComplete="on"
       />
-    </label>
+    </div>
   );
 }

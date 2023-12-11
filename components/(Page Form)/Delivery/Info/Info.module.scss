@@ -1,0 +1,24 @@
+.Info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media screen and (hover: none) and (width < 760px), screen and (hover: hover) and (width < 768px) {
+    display: none;
+  }
+
+  &__Icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('~@/public/svg/clock.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__Text {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

@@ -2,36 +2,50 @@
 
 .Delivery {
   &__Title {
-    margin: 29px 0 31px 30px;
-
+    margin: 29px 0 31px 31px;
     @include mobile {
-      margin-top: 29px;
       margin-bottom: 30px;
-      margin-left: 39px;
     }
   }
 
   &__FlexRow {
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 21px;
+    margin: 0 0 29px 31px;
+    @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
+      justify-content: center;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    @include mobile {
+      margin-bottom: 19px;
+    }
   }
 
-  &__Fieldset {
-    display: flex;
-    width: max-content;
-    height: max-content;
-    margin-left: 31px;
-    border-radius: 10px;
-    border: 1px solid #72a479;
-    overflow: hidden;
-    @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
-      margin-left: 15px;
+  &__TitleSmall {
+    margin: 0 0 22px 31px;
+    @include mobile {
+      margin-bottom: 16px;
     }
-    @media screen and (hover: none) and (width < 376px), screen and (hover: hover) and (width < 384px) {
-      margin-left: auto;
-      margin-right: auto;
+  }
+
+  &__Address {
+    margin: 0 0 32px 31px;
+    @media screen and (hover: none) and (width < 740px), screen and (hover: hover) and (width < 748x) {
+      justify-content: center;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    @include mobile {
+      flex-direction: column;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-bottom: 31px;
+    }
+    @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 370px) {
+      margin-left: 15px;
+      margin-right: 15px;
     }
   }
 }

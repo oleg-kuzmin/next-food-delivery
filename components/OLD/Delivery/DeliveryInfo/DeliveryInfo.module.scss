@@ -1,7 +1,7 @@
 .DeliveryInfo {
   display: flex;
   gap: 10px;
-  @media screen and (max-width: 770px) {
+  @media screen and (hover: none) and (width < 770px), screen and (hover: hover) and (width < 778px) {
     display: none;
   }
 

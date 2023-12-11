@@ -5,7 +5,7 @@ export default function TotalPriceMinSum({ value, minSum }) {
 
   return (
     <span className={styles.TotalPriceMinSum}>
-      Минимальная сума заказа <span className={classModifier}>{minSum} ₽</span>
+      Минимальная сума заказа&nbsp;<span className={classModifier}>{minSum} ₽</span>
     </span>
   );
 }

@@ -17,8 +17,8 @@ export default function InputText({ name, placeholder, required, className }) {
   };
 
   return (
-    <label className={styles.Label + classElement}>
-      {!isValid && required && <span className={styles.Error}>Заполните поле</span>}
+    <div className={styles.Label + classElement}>
+      {!isValid && required && <span className={styles.Error}>Заполните это поле</span>}
       {!value && (
         <span className={styles.Text}>
           {placeholder}
@@ -26,7 +26,7 @@ export default function InputText({ name, placeholder, required, className }) {
         </span>
       )}
       <input
-        className={styles.Input}
+        className={styles.Input + ' outline-focus'}
         type="text"
         name={name}
         required={required}
@@ -34,6 +34,6 @@ export default function InputText({ name, placeholder, required, className }) {
         value={value}
         autoComplete="on"
       />
-    </label>
+    </div>
   );
 }

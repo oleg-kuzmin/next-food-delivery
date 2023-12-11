@@ -1,0 +1,11 @@
+.Section {
+  width: calc(100% - 60px);
+  max-width: 800px;
+  min-height: 85px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+
+  @media screen and (hover: none) and (width < 712px), screen and (hover: hover) and (width < 720px) {
+    width: calc(100% - 30px);
+  }
+}

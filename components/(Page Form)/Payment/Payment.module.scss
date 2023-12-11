@@ -1,0 +1,11 @@
+@import '@/styles/mixins/mixins.scss';
+
+.Payment {
+  &__Title {
+    margin: 29px 0 31px 31px;
+    @include mobile {
+      margin-top: 29px;
+      margin-bottom: 26px;
+    }
+  }
+}

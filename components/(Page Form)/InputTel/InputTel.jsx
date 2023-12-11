@@ -2,9 +2,10 @@
 import { useState } from 'react';
 import styles from './InputTel.module.scss';
 
-export default function InputTel({ name, placeholder, required }) {
+export default function InputTel({ name, placeholder, required, className }) {
   const [value, setValue] = useState('');
   const [isValid, setIsValid] = useState(false);
+  const classElement = className ? ` ${className}` : '';
 
   const handleChangeValue = evt => {
     setValue(evt.target.value);
@@ -16,8 +17,8 @@ export default function InputTel({ name, placeholder, required }) {
   };
 
   return (
-    <div className={styles.Label}>
-      {!isValid && <span className={styles.Error}>Заполните это поле в формате +79175105759</span>}
+    <label className={styles.Label + classElement}>
+      {!isValid && required && <span className={styles.Error}>Заполните поле в формате +79175105759</span>}
       {!value && (
         <span className={styles.Text}>
           {placeholder}
@@ -25,7 +26,7 @@ export default function InputTel({ name, placeholder, required }) {
         </span>
       )}
       <input
-        className={styles.Input + ' outline-focus'}
+        className={styles.Input}
         type="tel"
         name={name}
         required={required}
@@ -34,6 +35,6 @@ export default function InputTel({ name, placeholder, required }) {
         pattern="^\+7[0-9]{10}"
         autoComplete="on"
       />
-    </div>
+    </label>
   );
 }

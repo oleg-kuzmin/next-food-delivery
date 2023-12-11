@@ -25,19 +25,9 @@
   }
 
   &__Form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__Contacts {
-    margin-bottom: 22px;
+    padding-bottom: 90px;
     @include mobile {
-      margin-bottom: 20px;
+      padding-bottom: 45px;
     }
-  }
-
-  &__Delivery {
-    margin-bottom: 20px;
   }
 }

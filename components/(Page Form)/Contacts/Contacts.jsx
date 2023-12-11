@@ -1,19 +1,19 @@
 import Section from '../Section/Section';
 import Title from '../Title/Title';
+import InputContainer from './InputContainer/InputContainer';
 import InputText from '../InputText/InputText';
 import InputTel from '../InputTel/InputTel';
 import styles from './Contacts.module.scss';
 
-export default function Contacts() {
+export default function Contacts({ className }) {
+  const classElement = className ? ` ${className}` : '';
   return (
-    <Section className={styles.Section}>
-      <div className={styles.Contacts}>
-        <Title className={styles.Contacts__Title} text="1. Контактная информация" />
-        <fieldset className={styles.Contacts__Fieldset}>
-          <InputText name="userName" placeholder="Имя" required />
-          <InputTel name="tel" placeholder="Телефон" required />
-        </fieldset>
-      </div>
+    <Section className={styles.Contacts + classElement}>
+      <Title className={styles.Contacts__Title} text="1. Контактная информация" />
+      <InputContainer className={styles.Contacts__InputContainer}>
+        <InputText name="userName" placeholder="Имя" required />
+        <InputTel name="tel" placeholder="Телефон" required />
+      </InputContainer>
     </Section>
   );
 }
