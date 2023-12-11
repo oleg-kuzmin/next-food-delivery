@@ -4,6 +4,9 @@ import Section from '../Section/Section';
 import Title from '../Title/Title';
 import InputTwoRadio from '../InputTwoRadio/InputTwoRadio';
 import InputTime from '../InputTime/InputTime';
+import InputNumberPersons from '../InputNumberPersons/InputNumberPersons';
+import TitleSmall from '../TitleSmall/TitleSmall';
+import InputCallRadio from '../InputCallRadio/InputCallRadio';
 import styles from './Time.module.scss';
 
 export default function Time() {
@@ -33,6 +36,18 @@ export default function Time() {
         />
         {isVisibleInputTime && <InputTime className={styles.Time__InputTime} name="timeDelivery" required />}
       </div>
+      <InputNumberPersons className={styles.Time__InputNumberPersons} />
+      <TitleSmall className={styles.Time__TitleSmall} text="Хотите мы позвоним?" />
+      <InputCallRadio
+        className={styles.Time__InputCallRadio}
+        name="callMe"
+        value1={false}
+        value2={true}
+        id1="callMeFalse"
+        id2="callMeTrue"
+        text1="Не перезванивать"
+        text2="Потребуется звонок оператора"
+      />
     </Section>
   );
 }

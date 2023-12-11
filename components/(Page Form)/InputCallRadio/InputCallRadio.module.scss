@@ -1,0 +1,46 @@
+@import '@/styles/mixins/mixins.scss';
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.Input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &:checked + .Label::before {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('~@/public/svg/call-icon-true.svg'), url('~@/public/svg/call-icon-2-true.svg');
+  }
+  &:not(:disabled):not(:checked) + .Label:hover::before {
+    background-image: url('~@/public/svg/call-icon-true.svg');
+  }
+}
+
+.Label {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: #72a479;
+  }
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-inline-end: 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('~@/public/svg/call-icon-false.svg');
+  }
+}

@@ -1,0 +1,89 @@
+@import '@/styles/mixins/mixins.scss';
+
+.Container {
+  display: flex;
+  align-items: center;
+  max-width: 263px;
+  min-height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.Text {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 33px 0 29px;
+  @include mobile {
+    padding-right: 47px;
+    padding-left: 29px;
+  }
+  @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
+    padding-left: 15px;
+  }
+}
+
+.Input {
+  width: 42px;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  appearance: none;
+  &:focus-visible {
+    outline: none;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  &:hover,
+  &:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+  }
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:focus-visible {
+    outline: 1px solid #cfcfcf;
+  }
+  &::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &_type_minus {
+    &::after {
+      background-image: url('~@/public/svg/minus.svg');
+    }
+  }
+  &_type_plus {
+    &::after {
+      background-image: url('~@/public/svg/plus.svg');
+    }
+  }
+}

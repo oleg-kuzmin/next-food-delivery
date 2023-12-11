@@ -23,6 +23,9 @@
   color: inherit;
   background-color: transparent;
   transform: scaleZ(1);
+  @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
+    padding-left: 15px;
+  }
   &:hover {
     border: 1px solid #cfcfcf;
   }
@@ -36,9 +39,6 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     -webkit-text-fill-color: #fff;
     transition: background-color 5000s ease-in-out 0s;
-  }
-  @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
-    padding-left: 15px;
   }
 }
 
