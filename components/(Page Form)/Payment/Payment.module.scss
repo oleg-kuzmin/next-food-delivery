@@ -37,7 +37,7 @@
       margin-right: auto;
       margin-top: 25px;
     }
-    @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 370px) {
+    @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
       width: calc(100% - 30px);
     }
   }

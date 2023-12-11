@@ -1,0 +1,39 @@
+@import '@/styles/mixins/mixins.scss';
+
+.Time {
+  &__Title {
+    margin: 29px 0 32px 31px;
+    @include mobile {
+      margin-top: 29px;
+      margin-bottom: 27px;
+    }
+  }
+
+  &__FlexRow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 31px 29px 31px;
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 21px;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
+    @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
+      align-items: center;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  &__InputTime {
+    width: 185px;
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
