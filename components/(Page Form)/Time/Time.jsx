@@ -9,8 +9,9 @@ import TitleSmall from '../TitleSmall/TitleSmall';
 import InputCallRadio from '../InputCallRadio/InputCallRadio';
 import styles from './Time.module.scss';
 
-export default function Time() {
+export default function Time({ className }) {
   const [isVisibleInputTime, setIsVisibleInputTime] = useState(false);
+  const classElement = className ? ` ${className}` : '';
 
   const handleChange = evt => {
     if (evt.target.value === 'true') {
@@ -21,7 +22,7 @@ export default function Time() {
   };
 
   return (
-    <Section className={styles.Time}>
+    <Section className={styles.Time + classElement}>
       <Title className={styles.Time__Title} text="4. Когда доставить" />
       <div className={styles.Time__FlexRow}>
         <InputTwoRadio

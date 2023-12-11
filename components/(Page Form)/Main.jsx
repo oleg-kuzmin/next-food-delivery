@@ -4,6 +4,7 @@ import Contacts from './Contacts/Contacts';
 import Delivery from './Delivery/Delivery';
 import Payment from './Payment/Payment';
 import Time from './Time/Time';
+import Submit from './Submit/Submit';
 import styles from './Main.module.scss';
 
 export default function Main() {
@@ -16,6 +17,7 @@ export default function Main() {
         <Delivery className={styles.Main__Delivery} />
         <Payment className={styles.Main__Payment} />
         <Time className={styles.Main__Time} />
+        <Submit className={styles.Main__Time} />
       </form>
     </main>
   );
