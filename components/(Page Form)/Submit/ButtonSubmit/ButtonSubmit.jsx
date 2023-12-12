@@ -1,16 +1,17 @@
 'use client';
-import Link from 'next/link';
+// import { useSelector } from 'react-redux';
+// import Link from 'next/link';
 import styles from './ButtonSubmit.module.scss';
 
 export default function ButtonSubmit({ className }) {
+  // const reduxBasket = useSelector(state => state.basket);
+  // const isValidLink = reduxBasket.basket.length > 0;
   const classElement = className ? ` ${className}` : '';
-  const handleClick = () => {
-    console.log(123);
-  };
+  // const handleClick = evt => {};
 
   return (
-    <Link className={styles.ButtonSubmit + classElement + ' ui-green'} href="/" onClick={handleClick}>
+    <button className={styles.ButtonSubmit + classElement + ' ui-green'} type="submit">
       Оформить заказ
-    </Link>
+    </button>
   );
 }

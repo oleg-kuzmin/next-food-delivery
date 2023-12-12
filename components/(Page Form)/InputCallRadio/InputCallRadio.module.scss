@@ -31,8 +31,10 @@
   line-height: normal;
   user-select: none;
   cursor: pointer;
-  &:hover {
-    color: #72a479;
+  @media screen and (hover: hover) {
+    &:hover {
+      color: #72a479;
+    }
   }
   &::before {
     content: '';

@@ -26,8 +26,10 @@
   @media screen and (hover: none) and (width < 370px), screen and (hover: hover) and (width < 378px) {
     padding-left: 15px;
   }
-  &:hover {
-    border: 1px solid #cfcfcf;
+  @media screen and (hover: hover) {
+    &:hover {
+      border: 1px solid #cfcfcf;
+    }
   }
   &:focus {
     outline: none;

@@ -30,8 +30,10 @@
     width: 136px;
     height: 51px;
   }
-  &:hover {
-    border: 1px solid #cfcfcf;
+  @media screen and (hover: hover) {
+    &:hover {
+      border: 1px solid #cfcfcf;
+    }
   }
   &:first-of-type {
     border-top-left-radius: 10px;

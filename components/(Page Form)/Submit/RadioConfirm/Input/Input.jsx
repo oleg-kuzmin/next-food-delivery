@@ -8,6 +8,7 @@ export default function Input({ className }) {
       id="confirmPersonal"
       type="checkbox"
       autoComplete="off"
+      required
     />
   );
 }

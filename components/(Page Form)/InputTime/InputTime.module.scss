@@ -23,8 +23,10 @@
   color: inherit;
   background-color: transparent;
   transform: scaleZ(1);
-  &:hover {
-    border: 1px solid #cfcfcf;
+  @media screen and (hover: hover) {
+    &:hover {
+      border: 1px solid #cfcfcf;
+    }
   }
   &:focus {
     outline: none;
