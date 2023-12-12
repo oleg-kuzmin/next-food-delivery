@@ -1,13 +1,6 @@
 import styles from './SucсessContent.module.scss';
 
-// export default function SucсessContent(props) {
-//   const result = {...props.object}
-//   console.log(result);
-//   return <div className={styles.SucсessContent}>123</div>;
-// }
-
 export default function SucсessContent({ className, object }) {
-  console.log(object);
   const classElement = className ? ` ${className}` : '';
 
   const elements = Object.keys(object).map(key => {

@@ -33,11 +33,6 @@
   @media screen and (hover: none) and (width < 520px), screen and (hover: hover) and (width < 528px) {
     width: 92px;
   }
-  @media screen and (hover: hover) {
-    &:hover {
-      border: 1px solid #cfcfcf;
-    }
-  }
   &:first-of-type {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
