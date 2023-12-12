@@ -9,7 +9,7 @@ import styles from './TotalPriceInfo.module.scss';
 export default function TotalPriceInfo({ className }) {
   const classElement = className ? ` ${className}` : '';
   const reduxBasket = useSelector(state => state.basket);
-  const sum = getSum(reduxBasket.basket);
+  const sum = getSum(reduxBasket);
 
   return (
     <div className={styles.TotalPriceInfo + classElement}>

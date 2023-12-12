@@ -26,7 +26,7 @@ export default function Time({ className }) {
       <Title className={styles.Time__Title} text="4. Когда доставить" />
       <div className={styles.Time__FlexRow}>
         <InputTwoRadio
-          name="fastShipping"
+          name="shippingFast"
           value1={true}
           value2={false}
           id1="fastShippingTrue"
@@ -35,7 +35,7 @@ export default function Time({ className }) {
           text2="Ко времени"
           onChange={handleChange}
         />
-        {isVisibleInputTime && <InputTime className={styles.Time__InputTime} name="timeDelivery" required />}
+        {isVisibleInputTime && <InputTime className={styles.Time__InputTime} name="shippingTime" required />}
       </div>
       <InputNumberPersons className={styles.Time__InputNumberPersons} />
       <TitleSmall className={styles.Time__TitleSmall} text="Хотите мы позвоним?" />

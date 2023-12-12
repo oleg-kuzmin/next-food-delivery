@@ -12,7 +12,7 @@ export default function BasketDesktop({ className }) {
   const [showModal, setShowModal] = useState(false);
   const [documentContainer, setDocumentContainer] = useState(null);
   const reduxBasket = useSelector(state => state.basket);
-  const counterOrders = sumOrders(reduxBasket.basket);
+  const counterOrders = sumOrders(reduxBasket);
   const isValidLink = counterOrders > 0;
   const classElement = className ? ` ${className}` : '';
 

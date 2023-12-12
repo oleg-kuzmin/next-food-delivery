@@ -36,7 +36,7 @@ export default function Payment({ className }) {
       />
       {!isVisibleInputAmount && <div className={styles.Payment__EmptyBlock}></div>}
       {isVisibleInputAmount && (
-        <InputText className={styles.Payment__InputAmount} name="amount" placeholder="Сдача с" />
+        <InputText className={styles.Payment__InputAmount} name="paymentAmount" placeholder="Сдача с" />
       )}
     </Section>
   );

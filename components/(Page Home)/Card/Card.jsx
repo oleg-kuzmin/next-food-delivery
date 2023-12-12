@@ -25,7 +25,7 @@ export default function Card({ objectCard, priority = false }) {
 
   const dispatch = useDispatch();
   const reduxBasket = useSelector(state => state.basket);
-  const orderData = getOrderData(cardOrder.id, reduxBasket.basket);
+  const orderData = getOrderData(cardOrder.id, reduxBasket);
 
   useEffect(() => {
     if (orderData) {

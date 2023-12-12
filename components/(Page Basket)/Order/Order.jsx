@@ -1,6 +1,6 @@
 'use client';
 import { useDispatch } from 'react-redux';
-import { deleteOrder, updateCounter, newOrder } from '@/redux/slices/basketSlice';
+import { deleteOrder, newOrder } from '@/redux/slices/basketSlice';
 import { useState } from 'react';
 import OrderImage from './OrderImage/OrderImage';
 import OrderText from './OrderText/OrderText';

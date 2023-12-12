@@ -6,7 +6,7 @@ import styles from './TitleCounter.module.scss';
 export default function TitleCounter({ className }) {
   const classElement = className ? ` ${className}` : '';
   const reduxBasket = useSelector(state => state.basket);
-  const counterOrders = sumOrders(reduxBasket.basket);
+  const counterOrders = sumOrders(reduxBasket);
   const isActive = counterOrders > 0;
 
   const getTextContent = number => {

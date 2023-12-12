@@ -20,7 +20,7 @@ export default function AdditionalOrder({ object }) {
 
   const dispatch = useDispatch();
   const reduxBasket = useSelector(state => state.basket);
-  const orderData = getOrderData(object.id, reduxBasket.basket);
+  const orderData = getOrderData(object.id, reduxBasket);
 
   useEffect(() => {
     if (orderData) {

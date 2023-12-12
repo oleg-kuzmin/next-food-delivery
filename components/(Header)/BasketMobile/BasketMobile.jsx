@@ -14,7 +14,7 @@ export default function BasketMobile({ className }) {
   const [showModal, setShowModal] = useState(false);
   const [documentContainer, setDocumentContainer] = useState(null);
   const reduxBasket = useSelector(state => state.basket);
-  const isValidLink = reduxBasket.basket.length > 0;
+  const isValidLink = reduxBasket.length > 0;
   const classElement = className ? ` ${className}` : '';
 
   useEffect(() => {

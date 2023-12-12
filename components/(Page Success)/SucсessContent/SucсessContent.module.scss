@@ -1,0 +1,54 @@
+@import '@/styles/mixins/mixins.scss';
+
+.SucсessContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: max-content;
+  min-width: 410px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #79b382;
+  background-image: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+  @include mobile {
+    min-width: 210px;
+    padding: 10px;
+  }
+
+  &__Title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__Element {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__Basket {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}

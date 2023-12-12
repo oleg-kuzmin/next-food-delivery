@@ -6,8 +6,8 @@ import styles from './Submit.module.scss';
 export default function Submit() {
   return (
     <Section className={styles.Submit}>
-      <RadioConfirm className={styles.Submit__RadioConfirm}/>
-      <ButtonSubmit className={styles.Submit__Button}/>
+      <RadioConfirm className={styles.Submit__RadioConfirm} />
+      <ButtonSubmit className={styles.Submit__Button} />
     </Section>
   );
 }

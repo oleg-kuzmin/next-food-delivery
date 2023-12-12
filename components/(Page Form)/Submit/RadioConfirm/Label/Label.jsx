@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from './Label.module.scss';
 
-export default function Label({ className }) {
+export default function Label({ className, htmlFor }) {
   const classElement = className ? ` ${className}` : '';
   return (
-    <label className={styles.Label + classElement} htmlFor="confirmPersonal">
+    <label className={styles.Label + classElement} htmlFor={htmlFor}>
       <span>
         Я согласен на обработку моих перс. данных в соответствии с{' '}
         <Link href="/" className={styles.Label__Link}>

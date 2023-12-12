@@ -15,7 +15,7 @@ export default function Navigation() {
   const [nameActiveLink, setNameActiveLink] = useState('');
   const [visibleBasketDesktop, setVisibleBasketDesktop] = useState(false);
   const reduxState = useSelector(state => state.basket);
-  const counterOrders = sumOrders(reduxState.basket);
+  const counterOrders = sumOrders(reduxState);
 
   useEffect(() => {
     if (counterOrders > 0 && document.documentElement.scrollTop >= 99) {
@@ -50,7 +50,7 @@ export default function Navigation() {
 
   return (
     <NavigationContainer visibleBasketDesktop={visibleBasketDesktop}>
-      <nav className={styles.Navigation} id='navigation'>
+      <nav className={styles.Navigation} id="navigation">
         <Swiper {...swiperConfig}>
           <SwiperSlide className={styles.Navigation__SwiperSlide}>
             <NavigationElement href="/#coldAppetizers" onClick={handleClickLink} nameActiveLink={nameActiveLink}>
