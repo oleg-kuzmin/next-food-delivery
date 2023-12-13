@@ -4,7 +4,7 @@ export default function TotalPriceFreeShipping({ value, minFree }) {
   if (value >= minFree) {
     return (
       <div className={styles.TotalPriceFreeShipping}>
-        <span className={styles.TotalPriceFreeShipping__Span}>Доставка бесплатна!</span>
+        <span className={styles.TotalPriceFreeShipping__Span}>Доставка бесплатная!</span>
       </div>
     );
   } else {
