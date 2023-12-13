@@ -6,7 +6,6 @@ import ButtonBurger from '@/components/ButtonBurger/ButtonBurger';
 import MenuMobileButtonContainer from './MenuMobileButtonContainer/MenuMobileButtonContainer';
 import MenuMobileText from './MenuMobileText/MenuMobileText';
 import MenuMobilePanel from './MenuMobilePanel/MenuMobilePanel';
-import ScrollToElement from '@/components/ScrollToElement/ScrollToElement';
 import styles from './MenuMobile.module.scss';
 
 export default function MenuMobile({ className }) {
@@ -19,7 +18,7 @@ export default function MenuMobile({ className }) {
     const section = document.querySelector(`#${id}`);
     setTimeout(() => {
       if (section === null) {
-        recursion();
+        recursion(id);
       } else {
         router.push(`/#${id}`);
       }
@@ -31,16 +30,13 @@ export default function MenuMobile({ className }) {
     setActivePanel(!activePanel);
     if (evt.target.href !== undefined) {
       const id = evt.target.href.split('#')[1];
-      if (pathname === '/') {
-        recursion(id);
-      } else {
+      if (pathname !== '/') {
         router.push(`/`);
-        setTimeout(() => {
-          recursion(id);
-        }, 100);
       }
+      recursion(id);
     }
   };
+
   return (
     <div className={styles.MenuMobile + classElement}>
       <MenuMobileButtonContainer>
