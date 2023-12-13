@@ -17,16 +17,18 @@ export default function Form() {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    const result = {};
-    const form = document.querySelector('form');
-    const inputList = form.querySelectorAll(
-      'input[type=text], input[type=tel], input[type=radio]:checked, input[type=time], input[type=number], input[type=checkbox]:checked'
-    );
-    inputList.forEach(input => {
-      result[input.name] = input.value;
-    });
-    dispatch(saveUser(result));
-    router.push('/success');
+    if (isValidBasket) {
+      const result = {};
+      const form = document.querySelector('form');
+      const inputList = form.querySelectorAll(
+        'input[type=text], input[type=tel], input[type=radio]:checked, input[type=time], input[type=number], input[type=checkbox]:checked'
+      );
+      inputList.forEach(input => {
+        result[input.name] = input.value;
+      });
+      dispatch(saveUser(result));
+      router.push('/success');
+    }
   };
 
   return (

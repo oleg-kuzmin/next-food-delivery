@@ -1,5 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { saveUser } from '@/redux/slices/userSlice';
 import { usePathname } from 'next/navigation';
 import apiAddOptions from '@/components/(Api)/apiAddOptions';
 import AddressBarInput from './AddressBarInput/AddressBarInput';
@@ -15,19 +17,19 @@ export default function AddressBar({ className }) {
   const [indexActiveOption, setIndexActiveOption] = useState(-1);
   const classElement = className ? ` ${className}` : '';
   const pathname = usePathname();
-  const classModifier = isVisibleAddressBar ? '' : ` ${styles.AddressBar_invisible}`;
+  let classModifier = '';
+  const dispatch = useDispatch();
+  if (pathname === '/') {
+    classModifier = isVisibleAddressBar ? '' : ` ${styles.AddressBar_invisible}`;
+  }
 
   useEffect(() => {
-    if (pathname !== '/') {
-      setIsVisibleAddressBar(true);
+    document.addEventListener('mousedown', handleClickPage);
+    document.addEventListener('scroll', handleScrollPage);
+    if (document.documentElement.scrollTop >= 142) {
+      setIsVisibleAddressBar(false);
     } else {
-      document.addEventListener('mousedown', handleClickPage);
-      document.addEventListener('scroll', handleScrollPage);
-      if (document.documentElement.scrollTop >= 142) {
-        setIsVisibleAddressBar(false);
-      } else {
-        setIsVisibleAddressBar(true);
-      }
+      setIsVisibleAddressBar(true);
     }
     if (address) {
       apiAddOptions(address).then(res => {
@@ -39,7 +41,7 @@ export default function AddressBar({ className }) {
       document.removeEventListener('mousedown', handleClickPage);
       document.removeEventListener('scroll', handleScrollPage);
     };
-  }, [address, pathname]);
+  }, [address]);
 
   const handleChangeAddress = evt => {
     setAddress(evt.target.value);
@@ -74,6 +76,7 @@ export default function AddressBar({ className }) {
     if (address === evt.target.textContent) {
       setIsVisibleOptions(false);
       setIsValidity(true);
+      dispatch(saveUser({ addressStreet: evt.target.textContent }));
     }
   };
   const handleKeyDown = evt => {
