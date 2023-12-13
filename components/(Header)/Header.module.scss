@@ -10,8 +10,6 @@
     justify-content: center;
   }
   @include mobile {
-    position: sticky;
-    top: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(min-content, max-content) 52px;
@@ -19,9 +17,16 @@
     height: max-content;
     padding-bottom: 13px;
     border-bottom: none;
-    background-image: linear-gradient(rgba(64, 60, 59, 0.6) 0px 69px, rgba(64, 60, 59, 0));
-    z-index: 2;
-    pointer-events: none;
+    // background-image: linear-gradient(rgba(64, 60, 59, 0.8) 0px 69px, rgba(64, 60, 59, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0px 69px, rgba(64, 60, 59, 0));
+  }
+  &_Sticky {
+    @include mobile {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
   }
 
   &__TitleHidden {

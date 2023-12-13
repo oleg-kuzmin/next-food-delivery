@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import apiAddOptions from '@/components/(Api)/apiAddOptions';
 import AddressBarInput from './AddressBarInput/AddressBarInput';
 import AddressBarOptions from './AddressBarOptions/AddressBarOptions';
@@ -13,15 +14,20 @@ export default function AddressBar({ className }) {
   const [isVisibleOptions, setIsVisibleOptions] = useState(false);
   const [indexActiveOption, setIndexActiveOption] = useState(-1);
   const classElement = className ? ` ${className}` : '';
+  const pathname = usePathname();
   const classModifier = isVisibleAddressBar ? '' : ` ${styles.AddressBar_invisible}`;
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickPage);
-    document.addEventListener('scroll', handleScrollPage);
-    if (document.documentElement.scrollTop >= 142) {
-      setIsVisibleAddressBar(false);
-    } else {
+    if (pathname !== '/') {
       setIsVisibleAddressBar(true);
+    } else {
+      document.addEventListener('mousedown', handleClickPage);
+      document.addEventListener('scroll', handleScrollPage);
+      if (document.documentElement.scrollTop >= 142) {
+        setIsVisibleAddressBar(false);
+      } else {
+        setIsVisibleAddressBar(true);
+      }
     }
     if (address) {
       apiAddOptions(address).then(res => {
@@ -33,7 +39,7 @@ export default function AddressBar({ className }) {
       document.removeEventListener('mousedown', handleClickPage);
       document.removeEventListener('scroll', handleScrollPage);
     };
-  }, [address]);
+  }, [address, pathname]);
 
   const handleChangeAddress = evt => {
     setAddress(evt.target.value);

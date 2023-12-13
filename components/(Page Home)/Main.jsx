@@ -1,3 +1,4 @@
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import MainPicture from './MainPicture/MainPicture';
 import Navigation from './Navigation/Navigation';
 import FoodSection from './FoodSection/FoodSection';
@@ -16,6 +17,7 @@ import { drinks } from '@/data/drinks';
 export default function Main() {
   return (
     <main>
+      <ScrollToTop />
       <MainPicture />
       <Navigation />
       <FoodSection title="Холодные закуски" id="coldAppetizers" data={coldAppetizers} priority />

@@ -5,17 +5,14 @@
   }
 
   &__Link {
-    color: #cfcfcf;
+    color: #fff;
     font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
     white-space: nowrap;
     user-select: none;
-    transition: color 0.3s;
-    &:hover {
-      color: #fff;
-    }
   }
 }

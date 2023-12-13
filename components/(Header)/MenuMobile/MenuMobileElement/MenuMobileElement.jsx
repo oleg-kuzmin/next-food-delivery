@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styles from './MenuMobileElement.module.scss';
-
 export default function MenuMobileElement({ title, href, onClick }) {
   return (
     <li className={styles.MenuMobileElement}>

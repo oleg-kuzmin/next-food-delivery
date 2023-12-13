@@ -1,3 +1,5 @@
+'use client';
+import { usePathname } from 'next/navigation';
 import Logos from '@/components/Logos/Logos';
 import AddressBar from './AddressBar/AddressBar';
 import CallButton from './CallButton/CallButton';
@@ -8,8 +10,10 @@ import MenuMobile from './MenuMobile/MenuMobile';
 import styles from './Header.module.scss';
 
 export default function Header() {
+  const pathname = usePathname();
+  const classSticky = pathname === '/' ? ` ${styles.Header_Sticky}` : '';
   return (
-    <header className={styles.Header}>
+    <header className={styles.Header + classSticky}>
       <h1 className={styles.Header__TitleHidden}>Доставка еды</h1>
       <Logos className={styles.Header__Logos} />
       <AddressBar className={styles.Header__AddressBar} />
