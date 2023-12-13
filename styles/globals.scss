@@ -38,10 +38,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
   max-width: 1440px;
-  min-height: 1500px; //! временно
+  min-height: 100vh;
   font-family: 'Gilroy', 'Helvetica', 'Arial', sans-serif;
-  // background-image: linear-gradient(0deg, #211f20 0%, #44403f 100%);
+  background-image: linear-gradient(0deg, #211f20 0%, #44403f 100%);
   background-color: #403c3b;
   scroll-behavior: smooth;
 

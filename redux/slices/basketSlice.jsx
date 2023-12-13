@@ -36,11 +36,11 @@ export const basketSlice = createSlice({
       return state.filter(item => item.id !== action.payload.id);
     },
     //# очистка
-    deleteAll: () => {
+    deleteBasket: () => {
       return [];
     },
   },
 });
 
-export const { newOrder, deleteOrder, deleteAll } = basketSlice.actions;
+export const { newOrder, deleteOrder, deleteBasket } = basketSlice.actions;
 export default basketSlice.reducer;

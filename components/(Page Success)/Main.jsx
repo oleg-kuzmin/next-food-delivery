@@ -1,8 +1,11 @@
 'use client';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteBasket } from '@/redux/slices/basketSlice';
+import { useEffect } from 'react';
 import LinkBack from '@/components/LinkBack/LinkBack';
 import BlockTitle from '@/components/BlockTitle/BlockTitle';
 import SucсessContent from './SucсessContent/SucсessContent';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import styles from './Main.module.scss';
 
 export default function Main() {
@@ -12,9 +15,15 @@ export default function Main() {
   if (reduxBasket.length > 0) {
     result.basket = reduxBasket;
   }
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(deleteBasket());
+  }, [dispatch]);
 
   return (
     <main className={styles.Main}>
+      <ScrollToTop />
       <LinkBack className={styles.Main__LinkBack} text="вернуться на главную" href="/" />
       <BlockTitle className={styles.Main__BlockTitle} text="Ваш заказ создан" />
       <SucсessContent className={styles.Main__SucсessContent} object={result} />

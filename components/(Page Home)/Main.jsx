@@ -21,11 +21,11 @@ export default function Main() {
       <FoodSection title="Холодные закуски" id="coldAppetizers" data={coldAppetizers} priority />
       <FoodSection title="Горячие закуски" id="hotAppetizers" data={hotAppetizers} />
       <FoodSection title="Мясные блюда" id="meatDishes" data={meatDishes} />
-      <FoodSection title="Супы" id="soups" data={soups} />
-      <FoodSection title="Рыбные блюда" id="fishDishes" data={fishDishes} />
-      <FoodSection title="Гриль меню" id="grillDishes" data={grillDishes} />
-      <FoodSection title="Фирменные блюда" id="brandedDishes" data={brandedDishes} />
-      <FoodSection title="Напитки" id="drinks" data={drinks} />
+      {/* <FoodSection title="Супы" id="soups" data={soups} /> */}
+      {/* <FoodSection title="Рыбные блюда" id="fishDishes" data={fishDishes} /> */}
+      {/* <FoodSection title="Гриль меню" id="grillDishes" data={grillDishes} /> */}
+      {/* <FoodSection title="Фирменные блюда" id="brandedDishes" data={brandedDishes} /> */}
+      {/* <FoodSection title="Напитки" id="drinks" data={drinks} /> */}
       <AboutCafe />
       <Map />
       <Cover />
