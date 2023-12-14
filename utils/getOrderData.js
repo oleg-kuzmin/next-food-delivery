@@ -1,5 +1,9 @@
 export default function getOrderData(objectCardId, array) {
-  return array.find(element => {
-    return element.id === objectCardId;
-  });
+  if (array) {
+    return array.find(element => {
+      return element.id === objectCardId;
+    });
+  } else {
+    return null;
+  }
 }
