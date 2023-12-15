@@ -34,7 +34,7 @@ export default function Form() {
 
   return (
     <form className={styles.Form} onSubmit={handleSubmit}>
-      <Contacts className={styles.Form__Contacts} />
+      <Contacts className={styles.Form__Contacts} userName={reduxUser.userName} tel={reduxUser.tel} />
       <Delivery className={styles.Form__Delivery} street={reduxUser.addressStreet} house={reduxUser.addressHouse} />
       <Payment className={styles.Form__Payment} />
       <Time className={styles.Form__Time} />

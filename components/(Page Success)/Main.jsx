@@ -19,7 +19,6 @@ export default function Main() {
 
   const handleClick = () => {
     dispatch(deleteBasket());
-    dispatch(deleteUser());
   };
 
   return (

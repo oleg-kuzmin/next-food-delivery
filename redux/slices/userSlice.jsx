@@ -10,10 +10,6 @@ export const userSlice = createSlice({
     saveUser: (state, action) => {
       return (state = action.payload);
     },
-    //# очистка
-    deleteUser: () => {
-      return {};
-    },
   },
 });
 
