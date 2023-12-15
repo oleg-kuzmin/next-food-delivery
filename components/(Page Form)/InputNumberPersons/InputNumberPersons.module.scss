@@ -37,12 +37,14 @@
   text-align: center;
   background-color: transparent;
   appearance: none;
+  -moz-appearance:textfield;
   &:focus-visible {
     outline: none;
   }
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    margin: 0;
   }
   &:hover,
   &:focus {

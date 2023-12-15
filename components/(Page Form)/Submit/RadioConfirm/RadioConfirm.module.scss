@@ -11,6 +11,9 @@
     background-position: center;
     background-image: url('~@/public/svg/personal-information-icon.svg');
   }
+  &:focus-visible + .Label::before {
+    outline: 2px solid #cfcfcf;
+  }
 }
 
 .Label {

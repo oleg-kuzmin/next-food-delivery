@@ -1,6 +1,17 @@
+@import '@/styles/mixins/mixins.scss';
+
 .Label {
   &__Link {
     color: #72a479;
     text-decoration: underline;
+  }
+}
+
+.Modal {
+  align-items: flex-start;
+  padding-top: 100px;
+  overflow-y: auto;
+  @include mobile {
+    padding-top: 10px;
   }
 }

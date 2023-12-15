@@ -15,6 +15,9 @@
     background-position: center;
     background-image: url('~@/public/svg/call-icon-true.svg'), url('~@/public/svg/call-icon-2-true.svg');
   }
+  &:focus-visible + .Label::before {
+    outline: 1px solid #cfcfcf;
+  }
   &:not(:disabled):not(:checked) + .Label:hover::before {
     background-image: url('~@/public/svg/call-icon-true.svg');
   }

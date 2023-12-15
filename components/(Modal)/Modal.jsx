@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import ButtonClose from './ButtonClose/ButtonClose';
 import styles from './Modal.module.scss';
 
-export default function Modal({ children, isActive, setShowModal }) {
+export default function Modal({ children, isActive, setShowModal, className }) {
   useEffect(() => {
     document.addEventListener('mousedown', handleClickPage);
     document.addEventListener('keydown', handleKeydownEscape);
@@ -11,6 +11,8 @@ export default function Modal({ children, isActive, setShowModal }) {
       document.removeEventListener('keydown', handleKeydownEscape);
     };
   });
+
+  const classElement = className ? ` ${className}` : '';
 
   const handleClickPage = evt => {
     if (evt.target.classList.contains(styles.Modal_active)) {
@@ -31,7 +33,7 @@ export default function Modal({ children, isActive, setShowModal }) {
   const classActive = isActive ? ` ${styles.Modal_active}` : '';
 
   return (
-    <div className={styles.Modal + classActive}>
+    <div className={styles.Modal + classActive + classElement}>
       <div className={styles.Modal__Content}>
         <ButtonClose className={styles.Modal__ButtonClose} onClick={handleClickButtonClose} />
         {children}
