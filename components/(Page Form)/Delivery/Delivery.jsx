@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import Section from '../Section/Section';
 import Title from '../Title/Title';
 import InputTwoRadio from '../InputTwoRadio/InputTwoRadio';
@@ -9,7 +8,7 @@ import TitleSmall from '../TitleSmall/TitleSmall';
 import Address from './Address/Address';
 import styles from './Delivery.module.scss';
 
-export default function Delivery({ className }) {
+export default function Delivery({ className, street, house }) {
   const [isVisibleAddress, setIsVisibleAddress] = useState(true);
 
   const handleChange = evt => {
@@ -38,7 +37,7 @@ export default function Delivery({ className }) {
         {isVisibleAddress && <Info />}
       </div>
       {isVisibleAddress && <TitleSmall className={styles.Delivery__TitleSmall} text="Адрес доставки" />}
-      {isVisibleAddress && <Address className={styles.Delivery__Address} />}
+      {isVisibleAddress && <Address className={styles.Delivery__Address} street={street} house={house} />}
     </Section>
   );
 }

@@ -10,8 +10,12 @@ export const userSlice = createSlice({
     saveUser: (state, action) => {
       return (state = action.payload);
     },
+    //# очистка
+    deleteUser: () => {
+      return {};
+    },
   },
 });
 
-export const { saveUser } = userSlice.actions;
+export const { saveUser, deleteUser } = userSlice.actions;
 export default userSlice.reducer;

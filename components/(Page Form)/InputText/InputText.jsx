@@ -1,11 +1,18 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './InputText.module.scss';
 
-export default function InputText({ name, placeholder, required, className }) {
+export default function InputText({ name, placeholder, required, className, initialValue }) {
   const [value, setValue] = useState('');
   const [isValid, setIsValid] = useState(false);
   const classElement = className ? ` ${className}` : '';
+
+  useEffect(() => {
+    if (initialValue) {
+      setValue(initialValue);
+      setIsValid(true);
+    }
+  }, [initialValue]);
 
   const handleChangeValue = evt => {
     setValue(evt.target.value);

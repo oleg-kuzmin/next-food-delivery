@@ -76,7 +76,7 @@ export default function AddressBar({ className }) {
     if (address === evt.target.textContent) {
       setIsVisibleOptions(false);
       setIsValidity(true);
-      dispatch(saveUser({ addressStreet: evt.target.textContent }));
+      dispatch(saveUser({ addressStreet: options[0].data.street, addressHouse: options[0].data.house }));
     }
   };
   const handleKeyDown = evt => {

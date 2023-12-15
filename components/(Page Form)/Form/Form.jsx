@@ -12,6 +12,7 @@ import styles from './Form.module.scss';
 export default function Form() {
   const reduxBasket = useSelector(state => state.basket);
   const isValidBasket = reduxBasket.length > 0;
+  const reduxUser = useSelector(state => state.user);
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -34,7 +35,7 @@ export default function Form() {
   return (
     <form className={styles.Form} onSubmit={handleSubmit}>
       <Contacts className={styles.Form__Contacts} />
-      <Delivery className={styles.Form__Delivery} />
+      <Delivery className={styles.Form__Delivery} street={reduxUser.addressStreet} house={reduxUser.addressHouse} />
       <Payment className={styles.Form__Payment} />
       <Time className={styles.Form__Time} />
       <Submit className={styles.Form__Time} />
