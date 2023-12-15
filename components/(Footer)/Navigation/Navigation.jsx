@@ -8,7 +8,7 @@ export default function Navigation() {
         <NavigationElement href="#body" text="О ресторане" />
         <NavigationElement href="/terms" text="Условия доставки" />
         <NavigationElement href="#body" text="Возврат товара" />
-        <NavigationElement href="#body" text="Акции" />
+        <NavigationElement href="/promotions" text="Акции" />
       </ul>
     </nav>
   );

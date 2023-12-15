@@ -3,7 +3,7 @@ import MainPicture from './MainPicture/MainPicture';
 import Navigation from './Navigation/Navigation';
 import FoodSection from './FoodSection/FoodSection';
 import AboutCafe from './AboutCafe/AboutCafe';
-import Map from './Map/Map';
+import Map from '@/components/Map/Map';
 import Cover from './Cover/Cover';
 import { coldAppetizers } from '@/data/coldAppetizers';
 import { hotAppetizers } from '@/data/hotAppetizers';
