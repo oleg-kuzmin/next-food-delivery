@@ -1,0 +1,17 @@
+@import '@/styles/mixins/mixins.scss';
+
+.infoFlexContainer {
+  display: flex;
+  gap: 100px;
+  max-width: 800px;
+  padding-inline-start: 93px;
+  @media screen and (hover: none) and (width < 1278px), screen and (hover: hover) and (width < 1286px) {
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
+  @include mobile {
+    flex-direction: column;
+    gap: 21px;
+    padding-inline-start: 19px;
+  }
+}

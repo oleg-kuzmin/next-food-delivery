@@ -6,7 +6,7 @@ export default function Navigation() {
     <nav>
       <ul className={styles.Navigation}>
         <NavigationElement href="#body" text="О ресторане" />
-        <NavigationElement href="#body" text="Условия доставки" />
+        <NavigationElement href="/terms" text="Условия доставки" />
         <NavigationElement href="#body" text="Возврат товара" />
         <NavigationElement href="#body" text="Акции" />
       </ul>

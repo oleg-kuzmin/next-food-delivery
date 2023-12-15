@@ -1,0 +1,46 @@
+@import '@/styles/mixins/mixins.scss';
+
+.deliveryTerms {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-block-end: 20px;
+  @media screen and (hover: none) and (width < 1278px), screen and (hover: hover) and (width < 1286px) {
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
+  @include mobile {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+    padding-block-start: 25px;
+    padding-block-end: 30px;
+  }
+
+  &__column-left {
+    max-width: 618px;
+    width: 100%;
+  }
+
+  &__column-right {
+    max-width: 640px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    vertical-align: top;
+    @media screen and (hover: none) and (width < 375px), screen and (hover: hover) and (width < 383px) {
+      width: 346px;
+      max-height: 290px;
+    }
+    @media screen and (hover: none) and (width < 360px), screen and (hover: hover) and (width < 368px) {
+      width: 100%;
+    }
+  }
+}

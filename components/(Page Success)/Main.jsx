@@ -1,7 +1,6 @@
 'use client';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteBasket } from '@/redux/slices/basketSlice';
-import { deleteUser } from '@/redux/slices/userSlice';
 import LinkBack from '@/components/LinkBack/LinkBack';
 import BlockTitle from '@/components/BlockTitle/BlockTitle';
 import SucсessContent from './SucсessContent/SucсessContent';

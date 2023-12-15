@@ -1,0 +1,90 @@
+@import '@/styles/mixins/mixins.scss';
+
+.accordionItem {
+  max-width: 618px;
+  margin-block-end: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #494544 0%, #504b4a 100%);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0px 5px 10px rgba(114, 163, 121, 0.7);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    border-radius: 10px;
+    background: linear-gradient(133deg, #618967 0%, #72a479 100%);
+    @media screen and (hover: none) and (width < 850px), screen and (hover: hover) and (width < 858px) {
+      height: 74px;
+    }
+    @include mobile {
+      height: 55px;
+    }
+  }
+
+  &__headerText {
+    padding-inline-start: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px;
+    @media screen and (hover: none) and (width < 850px), screen and (hover: hover) and (width < 858px) {
+      padding-inline-start: 20px;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+
+  &__headericon {
+    margin-inline-end: 22px;
+    min-width: 24px;
+    height: 24px;
+    background-image: url('~@/public/svg/accordion-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+    @media screen and (hover: none) and (width < 850px), screen and (hover: hover) and (width < 858px) {
+      margin-inline-end: 25px;
+    }
+    &_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__body {
+    padding-block-start: 37px;
+    padding-block-end: 40px;
+    padding-inline-start: 30px;
+    padding-inline-end: 41px;
+    min-width: 227px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    user-select: none;
+    transition: padding-block-start 0.3s, padding-block-end 0.3s, line-height 0.3s, max-height 0.3s, height 0.3s,
+      color 0.3s;
+    @media screen and (hover: none) and (width < 850px), screen and (hover: hover) and (width < 858px) {
+      padding-block-start: 27px;
+      padding-block-end: 22px;
+      padding-inline-start: 20px;
+      padding-inline-end: 14px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &_hidden {
+      max-height: 0;
+      font-size: 0;
+      line-height: 0;
+      padding-block-start: 0;
+      padding-block-end: 0;
+      color: transparent;
+    }
+  }
+}

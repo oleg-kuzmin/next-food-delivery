@@ -12,7 +12,6 @@ export default function MainPicture() {
         width={1440}
         height={484}
         priority
-        // unoptimized //!
       />
     </picture>
   );
