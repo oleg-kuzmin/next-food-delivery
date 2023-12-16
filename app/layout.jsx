@@ -5,6 +5,12 @@ import Footer from '@/components/(Footer)/Footer';
 
 export const metadata = {
   title: 'food-delivery',
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    icon: '/svg/horse.svg',
+  },
 };
 
 export default function RootLayout(props) {
