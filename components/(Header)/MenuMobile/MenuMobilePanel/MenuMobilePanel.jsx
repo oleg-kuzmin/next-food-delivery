@@ -8,7 +8,7 @@ export default function MenuMobilePanel({ isActive, onClick }) {
 
   return (
     <CSSTransition nodeRef={nodeRef} in={isActive} classNames={{ ...styles }} timeout={500} unmountOnExit>
-      <div ref={nodeRef} className={styles.MenuMobilePanel}>
+      <nav ref={nodeRef} className={styles.MenuMobilePanel}>
         <ul>
           <MenuMobileElement title="Холодные закуски" href="#coldAppetizers" onClick={onClick} />
           <MenuMobileElement title="Горячие закуски" href="#hotAppetizers" onClick={onClick} />
@@ -19,7 +19,7 @@ export default function MenuMobilePanel({ isActive, onClick }) {
           <MenuMobileElement title="Фирменные блюда" href="#brandedDishes" onClick={onClick} />
           <MenuMobileElement title="Напитки" href="#drinks" onClick={onClick} />
         </ul>
-      </div>
+      </nav>
     </CSSTransition>
   );
 }
