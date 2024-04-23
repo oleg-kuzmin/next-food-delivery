@@ -18,7 +18,6 @@ export default function AddressBarInput({ classForEvt, isValidity, address, onCh
       onChange={onChange}
       onClick={onClick}
       onKeyDown={onKeyDown}
-      form="form-delivery"
     />
   );
 }
