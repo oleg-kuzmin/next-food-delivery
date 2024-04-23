@@ -3,7 +3,7 @@ import styles from './ButtonBurger.module.scss';
 
 export default function ButtonBurger({ isActive, onClick }) {
   return (
-    <button className={styles.ButtonBurger + ' outline-focus'} onClick={onClick}>
+    <div className={styles.ButtonBurger + ' outline-focus'} onClick={onClick}>
       <ButtonBurgerLine
         className={styles.ButtonBurger__Line1}
         classActive={styles.ButtonBurger__Line1_active}
@@ -19,6 +19,6 @@ export default function ButtonBurger({ isActive, onClick }) {
         classActive={styles.ButtonBurger__Line3_active}
         isActive={isActive}
       />
-    </button>
+    </div>
   );
 }
