@@ -32,7 +32,7 @@ export const brandedDishes = [
     weight: 225,
     price: 620,
     id: 'lamb',
-    description: 'Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком',
+    description: 'Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком',
     type: 'brandedDishes',
     counter: 0,
   },
