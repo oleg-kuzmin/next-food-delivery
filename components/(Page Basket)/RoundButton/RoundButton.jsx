@@ -18,8 +18,8 @@ export default function RoundButton({ type, onClick }) {
   }
 
   return (
-    <button className={styles.RoundButton + ' ui-green outline-focus'} onClick={onClick}>
+    <div className={styles.RoundButton + ' ui-green outline-focus'} onClick={onClick}>
       <div className={styles.RoundButton__Icon + classModifier}></div>
-    </button>
+    </div>
   );
 }
