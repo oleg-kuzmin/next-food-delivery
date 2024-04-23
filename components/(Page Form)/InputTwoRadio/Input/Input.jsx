@@ -9,7 +9,6 @@ export default function Input({ name, value, id, defaultChecked, onChange, class
       defaultChecked={defaultChecked}
       onChange={onChange}
       type="radio"
-      autoComplete="off"
     />
   );
 }
