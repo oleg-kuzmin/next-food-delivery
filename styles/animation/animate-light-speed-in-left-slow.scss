@@ -13,7 +13,7 @@
 
 .animate-light-speed-in-left-slow {
   animation-name: animate-light-speed-in-left-slow;
-  animation-timing-function: ease-out;
-  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-duration: 0.2s;
   animation-fill-mode: both;
 }

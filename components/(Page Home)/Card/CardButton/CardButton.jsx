@@ -12,10 +12,10 @@ export default function CardButton({ onClick, type }) {
       classModifier = ` ${styles.CardButton_type_basket}`;
       break;
     case 'plus':
-      classModifier = ` ${styles.CardButton_type_plus}`;
+      classModifier = ` ${styles.CardButton_type_plus}` + ' animate-light-speed-in-left-slow';
       break;
     case 'minus':
-      classModifier = ` ${styles.CardButton_type_minus}` + ' animate-light-speed-in-left';
+      classModifier = ` ${styles.CardButton_type_minus}` + ' animate-light-speed-in-left-slow';
       break;
     default:
       throw Error('Type is undefined');
