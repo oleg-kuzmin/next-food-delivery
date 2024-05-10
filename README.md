@@ -1,20 +1,23 @@
-# Learning project: food-delivery (NEXT-application, adaptive rubber layout)
+# Next Food Delivery (Интернет-магазин)
 
-Adaptive for screen resolution: 320px - 1440px
+Приложение Next.js для desktop и mobile. (5 страниц: главная, корзина, форма, условия доставки, акции). Интернет-магазин доставки еды, реализован поиск адреса. Можно добавлять товары в корзину, изменять их количество, удалять, заполнять форму заказа. Учитывается минимальная стоимость заказа, стоимость доставки. Показывается общее количество товаров, их стоимость. Данные сохраняются с помощью RTK, но без localstorage для удобства. Есть модальные окна (клик по корзине без товаров, условия в форме).
 
-### technologies
+## Технологии
 
-- html semantic structure
-- external fonts
-- flex
-- grid
-- react
-- redux
-- next
-- api
+React.
+Redux Toolkit.
+Адаптивная/резиновая верстка Perfect Pixel по макету Figma от 320px.
+Препроцессор Sass.
+Используется Flex, Grid.
+Использование стилей через css.module для React.
+Используется аккордеон на чистом CSS.
+Cовременный роутинг от Next (App Router).
+Сторонняя Api для поиска адреса доставки.
+Кастомная валидация формы.
+Библиотека Swiper с разными адаптивными настройкам под разные устройства.
+Библиотека React Transition Group для плавности некоторых элементов.
 
-### links
+## Ссылки
 
-- [Link to Figma](https://www.figma.com/file/uJfRGsxBCu3iD9zMRsyiRT/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD---%D0%94%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B5%D0%B4%D1%8B?type=design&node-id=0-1&mode=design&t=WZ5zPN0WWzg9j9jc-0)
-
-- [Link to Vercel Pages](https://next-food-delivery-indol.vercel.app/)
+- [Vercel Pages](https://next-food-delivery-indol.vercel.app/)
+- [Figma](https://www.figma.com/file/uJfRGsxBCu3iD9zMRsyiRT/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD---%D0%94%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B5%D0%B4%D1%8B?type=design&node-id=0-1&mode=design&t=WZ5zPN0WWzg9j9jc-0)
